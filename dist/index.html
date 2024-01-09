@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="side-bar">
+          <div class="side-header">
+            <h1 class="side-heding">To-Do list</h1>
+            <ul class="projects">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <form class="project-form">
+              <label for="project-name">Your project name:</label>
+              <input
+                id="project-name"
+                name="project-name"
+                placeholder="Add a new to-do project"
+                required
+              />
+              <label for="project-description">Your project description:</label>
+              <input
+                id="project-description"
+                name="project-description"
+                placeholder="Make a description"
+              />
+              <button class="add-project" type="submit" method="get">Create project</button>
+            </form>
+          </div>
+        </div>
+        <div class="main"></div>
+      </div>
+    </div>
+    <script src="main.js" defer></script>
+  </body>
+</html>
