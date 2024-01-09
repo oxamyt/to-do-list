@@ -1,0 +1,1 @@
+(()=>{"use strict";class e{constructor(e,t){this.title=e,this.description=t}}let t=[];document.querySelector(".add-project").addEventListener("click",(function(c){c.preventDefault();const o=document.querySelector("#project-name").value,n=document.querySelector("#project-description").value,r=new e(o,n);t.push(r),console.log(t)})),console.log("dadada")})();

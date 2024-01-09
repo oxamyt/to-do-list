@@ -1,0 +1,56 @@
+body{
+    min-height: 100vh;
+}
+
+.content{
+    min-height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.side-bar{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-color: #22d3ee;
+}
+
+.main{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background-color: #0891b2;
+}
+
+.side-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects{
+    align-self: flex-start;
+}
+
+.projects > li{
+    list-style: none;
+}
+
+.project-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-form > label{
+    align-self: flex-start;
+}
+
+.add-project{
+    margin-top: 1rem;
+}
