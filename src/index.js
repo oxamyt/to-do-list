@@ -1,15 +1,14 @@
 import { Projects, Project } from "./projects";
+import { createProject } from "./projects";
+import { Task, tasks, createTask } from "./tasks";
+import { taskRender } from "./task.render";
 
-export function createProject(event) {
-  event.preventDefault();
-  const title = document.querySelector("#project-name").value;
-  const description = document.querySelector("#project-description").value;
-  const newProject = new Project(title, description);
-  Projects.push(newProject);
-  console.log(Projects)
-}
 
-const btn = document.querySelector('.add-project');
-btn.addEventListener('click', createProject)
+const btnProject = document.querySelector('.add-project');
+btnProject.addEventListener('click', createProject);
+
+const btnTask = document.querySelector('.add-task');
+btnTask.addEventListener('click', createTask);
+btnTask.addEventListener('click', taskRender);
 
 console.log('dadada')
