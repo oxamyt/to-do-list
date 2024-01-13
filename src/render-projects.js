@@ -7,11 +7,9 @@ export function projectRender() {
   for (let i = 0; i < Projects.length; i++) {
     let project = Projects[i];
     let projectCard = document.createElement("div");
-    // projectCard.className = "project-card";
     projectCard.innerHTML = `<div class='project-card' data-index='${i}'>
     <h1 class="project-title">${project.title}</h1>
-    <h2 class='project-description'>${project.description}</h2>
-    <button class='delete-project'>Remove Project</button>
+    <img class="delete-project" src="assets/delete.svg">
     </div>`;
     projectCard.addEventListener("click", () => {
       switchActiveProject(i);
@@ -21,3 +19,4 @@ export function projectRender() {
     projectsDiv.appendChild(projectCard);
   }
 }
+{/* <h2 class='project-description'>${project.description}</h2> */}
