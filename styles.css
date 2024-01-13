@@ -13,27 +13,59 @@ body{
     min-height: 100vh;
 }
 
-.side-header{
-    display: flex;
+.project-form-container{
+    display: none;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+.side-header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 13.6rem;
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .side-bar{
     grid-column: 1 / 2;
     grid-row: 1 / 4;
-    background-color: #22d3ee;
+    background-color: #89CFF0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main{
     grid-column: 2 / 3;
     grid-row: 2 / 4;
-    background-color: #0891b2;
+    background-color:  #E5E5E5;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-flow: row;
     grid-auto-rows: 100px;
+}
+
+.add-svg{
+    width: 2rem;
+}
+
+.add-task{
+    display: flex;
+    align-items: center;
+}
+
+.render-task-form{
+    justify-self: end;
+    padding: 1rem;
 }
 
 .task-adder{
@@ -55,11 +87,23 @@ body{
     align-items: center;
     gap: 20px;
     margin-left: 2rem;
-    text-align: center
+    text-align: center;
+    justify-content: space-between;
 };
 
+.left-side-task{
+    display: flex;
+}
+
+.right-side-task{
+    display: flex;
+}
+
 .projects{
-    align-self: flex-start;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
 }
 
 .projects > li{
@@ -77,6 +121,42 @@ body{
     align-self: flex-start;
 }
 
-.add-project{
+.project-card{
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border: solid 2px #E5E5E5;
+}
+
+.delete-project{
+    width: 2rem;
+    cursor: pointer;
+}
+
+.delete-project:hover{
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+
+.add-project-button{
     margin-top: 1rem;
+    margin-right: 2rem;
+    align-self: flex-end;
+}
+
+.create-project{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #89CFF0;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.create-project:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
 }

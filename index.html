@@ -12,7 +12,12 @@
     <div class="content">
       <div class="container">
         <div class="side-bar">
-          <div class="side-header">
+          <div class="side-header">Projects</div>
+          <div class="projects"></div>
+          <div class="add-project-button">
+            <button class="create-project">Create Project</button>
+          </div>
+          <div class="project-form-container">
             <h1 class="side-heding">To-Do list</h1>
             <form class="project-form">
               <label for="project-name">Your project name:</label>
@@ -32,9 +37,6 @@
                 Create project
               </button>
             </form>
-            <div class="projects">
-              
-            </div>
           </div>
         </div>
         <div class="task-adder">
@@ -61,7 +63,18 @@
             </button>
           </form>
         </div>
-        <div class="main"></div>
+        <div class="main">
+          <div class="render-task-form">
+            <p class="add-task">
+              <img
+                class="add-svg"
+                alt="add-task-plus-picture"
+                src="assets/create.svg"
+              />
+              Create task
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="main.js" defer></script>
