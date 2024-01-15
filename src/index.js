@@ -16,6 +16,10 @@ btnProject.addEventListener('click', function(){
 const btnTask = document.querySelector(".add-task");
 btnTask.addEventListener("click", createTask);
 btnTask.addEventListener("click", taskRender);
+btnTask.addEventListener("click", function(){
+    taskForm.style.display ='none';
+});
+
 
 document.querySelector('.main').addEventListener('click', function(event){
     const target = event.target;
@@ -37,4 +41,13 @@ const projectForm = document.querySelector('.project-form-container');
 const btnRenderProject = document.querySelector('.create-project');
 btnRenderProject.addEventListener('click', function(){
         projectForm.style.display = 'flex';
+})
+
+
+const taskForm = document.querySelector('.task-form-container');
+document.addEventListener('click', function(event){
+    const target = event.target;
+    if(target.classList.contains('task-btn-render')){
+        taskForm.style.display ='flex';
+    }
 })
