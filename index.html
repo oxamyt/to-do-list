@@ -39,33 +39,39 @@
             </form>
           </div>
         </div>
-        <div class="task-adder">
-          <form class="task-form">
-            <label for="task-title">Your task:</label>
-            <input type="text" id="task-title" name="task-title" />
-            <label for="task-description">Your task description:</label>
-            <input type="text" id="task-description" name="task-description" />
-            <label for="task-date">Your task deadline:</label>
-            <input type="date" id="task-date" name="task-date" />
-            <label for="priority-choice">Choose your priority:</label>
-            <input
-              list="priority"
-              id="priority-choice"
-              name="priority-choice"
-            />
-            <datalist id="priority">
-              <option value="High">High</option>
-              <option value="Average">Average</option>
-              <option value="Low">Low</option>
-            </datalist>
-            <button class="add-task" type="submit" method="get">
-              Add Task
-            </button>
-          </form>
+        <div class="header">
+          <div class="task-form-container">
+            <form class="task-form">
+              <label for="task-title">Your task:</label>
+              <input type="text" id="task-title" name="task-title" />
+              <label for="task-description">Your task description:</label>
+              <input
+                type="text"
+                id="task-description"
+                name="task-description"
+              />
+              <label for="task-date">Your task deadline:</label>
+              <input type="date" id="task-date" name="task-date" />
+              <label for="priority-choice">Choose your priority:</label>
+              <input
+                list="priority"
+                id="priority-choice"
+                name="priority-choice"
+              />
+              <datalist id="priority">
+                <option value="High">High</option>
+                <option value="Average">Average</option>
+                <option value="Low">Low</option>
+              </datalist>
+              <button class="add-task" type="submit" method="get">
+                Add Task
+              </button>
+            </form>
+          </div>
         </div>
         <div class="main">
           <div class="render-task-form">
-            <p class="add-task">
+            <p class="task-btn-render">
               <img
                 class="add-svg"
                 alt="add-task-plus-picture"
