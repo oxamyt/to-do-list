@@ -5,7 +5,7 @@ export class Project {
     this.title = title;
     this.description = description;
     this.tasks = [];
-    this.active = true;
+    this.active = false;
   }
 }
 
@@ -18,7 +18,6 @@ export function activeProject() {
 export function switchActiveProject(index) {
   Projects.forEach((project, i) => (project.active = i === index));
 }
-
 
 export function createProject(event) {
   event.preventDefault();
