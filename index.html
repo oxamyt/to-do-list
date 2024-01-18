@@ -22,13 +22,17 @@
             <form class="project-form">
               <label for="project-name">Your project name:</label>
               <input
+                type="text"
                 id="project-name"
                 name="project-name"
                 placeholder="Add a new to-do project"
                 required
+                minlength="3"
+                maxlength="30"
               />
               <label for="project-description">Your project description:</label>
               <input
+                type="text"
                 id="project-description"
                 name="project-description"
                 placeholder="Make a description"
@@ -38,8 +42,6 @@
               </button>
             </form>
           </div>
-        </div>
-        <div class="header">
           <div class="task-form-container">
             <form class="task-form">
               <label for="task-title">Your task:</label>
@@ -69,16 +71,19 @@
             </form>
           </div>
         </div>
+        <div class="header">
+
+        </div>
         <div class="main">
           <div class="render-task-form">
-            <p class="task-btn-render">
+            <button class="task-btn-render">
               <img
                 class="add-svg"
                 alt="add-task-plus-picture"
                 src="assets/create.svg"
               />
               Create task
-            </p>
+            </button>
           </div>
         </div>
       </div>
