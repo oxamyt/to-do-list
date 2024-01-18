@@ -5,6 +5,7 @@ body {
 :root {
   --main-font-color: #ffffff;
   --secondary-font-color: #bebebe;
+  --black-font-color: #222222;
 }
 
 .content {
@@ -77,6 +78,7 @@ body {
 }
 
 .task-btn-render {
+  border: none;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -106,16 +108,16 @@ body {
   align-items: flex-end;
 }
 
-.project-info{
+.project-info {
   margin: 1rem;
 }
 
-.title{
+.title {
   color: var(--main-font-color);
   font-size: 2rem;
 }
 
-.description{
+.description {
   color: var(--secondary-font-color);
   font-size: 1.3rem;
 }
@@ -126,7 +128,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   background-color: #2f3e46;
-  padding: 3rem;
+  padding: 5rem;
   border-radius: 20px;
   color: var(--main-font-color);
 }
@@ -140,36 +142,45 @@ body {
   font-size: 2rem;
 }
 
-.task-form button {
+.add-task{
   cursor: pointer;
   text-decoration: none;
-  border: none;
-  padding: 1.5rem 2rem;
-  border-radius: 15px;
-  background-color: #cad2c5;
-  color: #333333;
-  font-size: 1.4rem;
+  background-color: #4ade80;
+  border: 2px solid #dcfce7;
+  padding: 1rem 1.5rem;
+  color: var(--secondary-font-color0);
+  font-size: 1.5rem;
   font-weight: bold;
-}
-
-.task-form button {
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  padding: 1.5rem 2rem;
-  border-radius: 15px;
-  background-color: #cad2c5;
-  color: #333333;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-.add-task {
+  border-radius: 20px;
   align-self: center;
 }
 
-.task-date {
-  width: 5%;
+.add-task:hover {
+  color: var(--black-font-color);
+  background-color: #bbf7d0;
+  padding: 1rem 2rem;
+  transition: 0.7s;
+}
+
+.cancel-task{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #ef4444;
+  border: 2px solid #dcfce7;
+  padding: 1rem 1.5rem;
+  color: var(--secondary-font-color0);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.cancel-task:hover{
+  color: var(--black-font-color);
+  background-color: #dc2626;
+  border: 2px solid #f87171;
+  padding: 1rem 2rem;
+  transition: 0.7s;
 }
 
 .right-side-task {
@@ -271,7 +282,7 @@ body {
   gap: 20px;
 }
 
-.project-title{
+.project-title {
   font-size: 1.5rem;
 }
 
@@ -287,11 +298,12 @@ body {
   background-color: #ffffff;
   padding: 5rem;
   border-radius: 20px;
+  border: solid 6px #bbf7d0;
 }
 
 .project-form input {
-  height: 1.4rem;
-  font-size: 1.5rem;
+  height: 3rem;
+  font-size: 2rem;
 }
 
 .project-form label {
@@ -299,16 +311,41 @@ body {
   font-size: 2rem;
 }
 
-.project-form button {
+.add-project{
   cursor: pointer;
   text-decoration: none;
-  background-color: #4caf50;
-  border: 2px solid #9ca3af;
+  background-color: #4ade80;
+  border: 2px solid #dcfce7;
   padding: 1.3rem 2rem;
-  color: #333333;
+  color: var(--main-font-color);
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 20px;
+}
+
+.add-project:hover {
+  color: var(--black-font-color);
+  background-color: #bbf7d0;
+  transition: 0.7s;
+}
+
+.cancel-project{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #ef4444;
+  border: 2px solid #dcfce7;
+  padding: 1.3rem 2rem;
+  color: var(--main-font-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.cancel-project:hover{
+  color: var(--black-font-color);
+  background-color: #dc2626;
+  border: 2px solid #f87171;
+  transition: 0.7s;
 }
 
 .project-card {
@@ -348,14 +385,14 @@ body {
   background-color: #84a98c;
   border: none;
   border-radius: 20px;
-  padding:1rem;
+  padding: 1rem;
   transition: 0.5s;
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: bold;
 }
 
-.delete-task:hover{
-background-color: #a1cfab;
+.delete-task:hover {
+  background-color: #a1cfab;
 }
 
 .add-project-button {

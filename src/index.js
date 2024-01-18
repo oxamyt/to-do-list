@@ -53,5 +53,11 @@ document.addEventListener('click', function(event){
     else if (target.classList.contains('add-svg')){
         taskForm.style.display ='flex';
     }
+    else if (target.classList.contains('cancel-task')){
+        taskForm.style.display ='none';
+    }
+    else if (target.classList.contains('cancel-project')){
+        projectForm.style.display ='none';
+    }
 })
 defaultProject()
