@@ -1,14 +1,21 @@
 import { projectRender } from "./render-projects";
+import { headerRender } from "./render-projects";
 
 export class Project {
   constructor(title, description) {
     this.title = title;
     this.description = description;
     this.tasks = [];
-    this.active = false;
+    this.active = true;
   }
 }
 
+export function defaultProject() {
+  const DefaultProject = new Project("Default Project", "");
+  Projects.push(DefaultProject);
+  projectRender();
+  headerRender();
+}
 export let Projects = [];
 
 export function activeProject() {
@@ -26,4 +33,5 @@ export function createProject(event) {
   const newProject = new Project(title, description);
   Projects.push(newProject);
   projectRender();
+  headerRender()
 }

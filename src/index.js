@@ -4,6 +4,7 @@ import { taskRender } from "./task.render";
 import { projectRender } from "./render-projects";
 import { removeTask } from "./manipulate.tasks";
 import { removeProject } from "./manipulate-projects";
+import { defaultProject } from "./projects";
 
 
 const btnProject = document.querySelector(".add-project");
@@ -43,11 +44,14 @@ btnRenderProject.addEventListener('click', function(){
         projectForm.style.display = 'flex';
 })
 
-
 const taskForm = document.querySelector('.task-form-container');
 document.addEventListener('click', function(event){
     const target = event.target;
     if(target.classList.contains('task-btn-render')){
         taskForm.style.display ='flex';
     }
+    else if (target.classList.contains('add-svg')){
+        taskForm.style.display ='flex';
+    }
 })
+defaultProject()

@@ -102,7 +102,22 @@ body {
   grid-row: 1 / 2;
   background-color: #354f52;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.project-info{
+  margin: 1rem;
+}
+
+.title{
+  color: var(--main-font-color);
+  font-size: 2rem;
+}
+
+.description{
+  color: var(--secondary-font-color);
+  font-size: 1.3rem;
 }
 
 .task-form {
@@ -181,6 +196,7 @@ body {
   top: 0;
   left: 0;
   background-color: #eee;
+  cursor: pointer;
 }
 
 .checkbox-cont:hover input ~ .checkbox {
@@ -253,6 +269,10 @@ body {
   align-items: center;
   width: 100%;
   gap: 20px;
+}
+
+.project-title{
+  font-size: 1.5rem;
 }
 
 .projects > li {

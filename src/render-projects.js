@@ -34,7 +34,9 @@ export function headerRender(){
 
   if (activeProj) {
     const desc = document.createElement('div');
-    desc.innerHTML=(`Description:${activeProj.description}`)
+    desc.classList.add('project-info')
+    desc.innerHTML=(`<h1 class="title" >${activeProj.title}</h1>
+    <h2 class="description">${activeProj.description}</h2>`)
     header.appendChild(desc);
   }
 }
