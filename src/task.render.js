@@ -30,6 +30,7 @@ export function taskRender() {
         <h2 class='date'>${task.date}</h2>
         <h2 class='priority'>${task.priority}</h2>
         <button class='delete-task'>Remove Task</button>
+        <img class='edit-task-svg' data-index='${index}' src='assets/edit.svg' alt='edit-svg'>
         </div>
     </div>`;
       main.appendChild(taskCard);

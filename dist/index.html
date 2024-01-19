@@ -18,7 +18,6 @@
             <button class="create-project">Create Project</button>
           </div>
           <div class="project-form-container">
-            <h1 class="side-heding">To-Do list</h1>
             <form class="project-form">
               <label for="project-name">Your project name:</label>
               <input
@@ -80,6 +79,39 @@
             </div>
             </form>
           </div>
+        </div>
+        <div class="edit-task-form-container" style="display: none;">
+          <form class="edit-task-form">
+            <label for="edit-task-title">Your task:</label>
+            <input type="text" id="edit-task-title" name="edit-task-title" />
+            <label for="edit-task-description">Your task description:</label>
+            <input
+              type="text"
+              id="edit-task-description"
+              name="edit-task-description"
+            />
+            <label for="edit-task-date">Your task deadline:</label>
+            <input type="date" id="edit-task-date" name="edit-task-date" />
+            <label for="edit-priority-choice">Choose your priority:</label>
+            <input
+              list="edit-priority"
+              id="edit-priority-choice"
+              name="edit-priority-choice"
+            />
+            <datalist id="edit-priority">
+              <option value="High">High</option>
+              <option value="Average">Average</option>
+              <option value="Low">Low</option>
+            </datalist>
+            <div class="edit-task-buttons">
+            <button class="edit-add-task" type="button">
+              Add Task
+            </button>
+            <button class="edit-cancel-task" type="submit" method="get">
+              Cancel task
+            </button>
+          </div>
+          </form>
         </div>
         <div class="header">
 
