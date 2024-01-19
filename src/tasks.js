@@ -1,5 +1,6 @@
 import { activeProject } from "./projects";
 import { taskRender } from "./task.render";
+import { saveToStorage } from "./projects";
 
 export class Task {
   constructor(title, description, date, priority) {
@@ -25,5 +26,6 @@ export function createTask(event) {
     const newTask = new Task(title, description, date, priority);
     activeProj.tasks.push(newTask);
     taskRender();
+    saveToStorage();
   }
 }

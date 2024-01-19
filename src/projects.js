@@ -1,5 +1,6 @@
 import { projectRender } from "./render-projects";
 import { headerRender } from "./render-projects";
+import { taskRender } from "./task.render";
 
 export class Project {
   constructor(title, description) {
@@ -33,5 +34,22 @@ export function createProject(event) {
   const newProject = new Project(title, description);
   Projects.push(newProject);
   projectRender();
-  headerRender()
+  headerRender();
+  saveToStorage();
+}
+
+export function saveToStorage(){
+  localStorage.setItem('projects', JSON.stringify(Projects))
+}
+
+export function loadFromStorage(){
+  const storedProjects = localStorage.getItem('projects');
+  if(storedProjects){
+      Projects = JSON.parse(storedProjects);
+      projectRender();
+      taskRender();
+  }
+  else{
+    defaultProject();
+  }
 }

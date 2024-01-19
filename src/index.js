@@ -4,8 +4,10 @@ import { taskRender } from "./task.render";
 import { projectRender } from "./render-projects";
 import { removeTask } from "./manipulate.tasks";
 import { removeProject } from "./manipulate-projects";
-import { defaultProject } from "./projects";
 import { EditTask } from "./manipulate.tasks";
+import { loadFromStorage } from "./projects";
+
+loadFromStorage();
 
 const btnProject = document.querySelector(".add-project");
 btnProject.addEventListener("click", createProject);
@@ -60,16 +62,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// document
-//   .querySelector(".edit-task-form-container")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     const editTaskIndex = this.dataset.index;
-//     EditTask(editTaskIndex);
-//     taskRender();
-//     editTaskForm.style.display = "none";
-//   });
-
 const editBtn = document.querySelector(".edit-add-task");
 editBtn.addEventListener("click", function (event) {
   event.preventDefault();
@@ -89,4 +81,4 @@ document.querySelector(".main").addEventListener("click", function (event) {
   }
 });
 
-defaultProject();
+

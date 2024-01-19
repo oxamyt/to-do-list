@@ -1,5 +1,6 @@
 import { activeProject } from "./projects";
 import { taskRender } from "./task.render";
+import { saveToStorage } from "./projects";
 
 export function removeTask(index) {
   const activeProj = activeProject();
@@ -7,6 +8,7 @@ export function removeTask(index) {
   if (activeProj) {
     activeProj.tasks.splice(index, 1);
     taskRender();
+    saveToStorage();
   }  
 }
 
@@ -19,4 +21,5 @@ export function EditTask(index){
   task.date = document.querySelector("#edit-task-date").value; 
   task.priority = document.querySelector("#edit-priority-choice").value;
   editTaskForm.style.display = 'none';
+  saveToStorage();
 }
