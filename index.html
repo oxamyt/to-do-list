@@ -6,7 +6,19 @@
 
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List</title>
   </head>
   <body>
     <div class="content">
@@ -37,13 +49,13 @@
                 placeholder="Make a description"
               />
               <div class="project-buttons">
-              <button class="add-project" type="submit" method="get">
-                Create project
-              </button>
-              <button class="cancel-project" type="submit" method="get">
-                Cancel
-              </button>
-            </div>
+                <button class="add-project" type="submit" method="get">
+                  Create project
+                </button>
+                <button class="cancel-project" type="submit" method="get">
+                  Cancel
+                </button>
+              </div>
             </form>
           </div>
           <div class="task-form-container">
@@ -70,17 +82,17 @@
                 <option value="Low">Low</option>
               </datalist>
               <div class="task-buttons">
-              <button class="add-task" type="submit" method="get">
-                Add Task
-              </button>
-              <button class="cancel-task" type="submit" method="get">
-                Cancel task
-              </button>
-            </div>
+                <button class="add-task" type="submit" method="get">
+                  Add Task
+                </button>
+                <button class="cancel-task" type="submit" method="get">
+                  Cancel task
+                </button>
+              </div>
             </form>
           </div>
         </div>
-        <div class="edit-task-form-container" style="display: none;">
+        <div class="edit-task-form-container" style="display: none">
           <form class="edit-task-form">
             <label for="edit-task-title">Your task:</label>
             <input type="text" id="edit-task-title" name="edit-task-title" />
@@ -104,18 +116,14 @@
               <option value="Low">Low</option>
             </datalist>
             <div class="edit-task-buttons">
-            <button class="edit-add-task" type="button">
-              Add Task
-            </button>
-            <button class="edit-cancel-task" type="submit" method="get">
-              Cancel task
-            </button>
-          </div>
+              <button class="edit-add-task" type="button">Add Task</button>
+              <button class="edit-cancel-task" type="submit" method="get">
+                Cancel task
+              </button>
+            </div>
           </form>
         </div>
-        <div class="header">
-
-        </div>
+        <div class="header"></div>
         <div class="main">
           <div class="render-task-form">
             <button class="task-btn-render">
